@@ -17,6 +17,7 @@ void buzzer_init(){
   P2SEL &= ~BIT7;
   P2SEL |= BIT6;
   P2DIR = BIT6;              /* enable output to speaker */
+  //playlist(2);
 }
 
 void buzzer_set_period(short note){

@@ -1,7 +1,6 @@
 #include <msp430.h>
-#include "buzzer.h"
 #include "switches.h"
-#include "song.h"
+
 
 __interrupt_vec(PORT2_VECTOR) Port_2(){
 
