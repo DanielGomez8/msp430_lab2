@@ -35,12 +35,25 @@ void switch_interrupt_handler(){
     switch_state_down = (p2val & SW0) ? 0 : 1; /* 0 when SW1 is up */
     switch_state_changed = 1;
     led_update();
+    playlist(1);  
   }
-  else if(!(p2val & SW1))
-    playlist(2);             
-  else if(!(p2val & SW2))
-    playlist(3);            
-  else if(!(p2val & SW3))
-    playlist(4);             
+  else if(!(p2val & SW1)){
+    switch_state_down = (p2val & SW1) ? 0 : 1; /* 0 when SW1 is up */
+    switch_state_changed = 1;
+    led_update();
+    playlist(2);
+  }
+  else if(!(p2val & SW2)){
+    switch_state_down = (p2val & SW2) ? 0 : 1; /* 0 when SW1 is up */
+    switch_state_changed = 1;
+    led_update();
+    playlist(3); 
+  }
+  else if(!(p2val & SW3)){
+    switch_state_down = (p2val & SW3) ? 0 : 1; /* 0 when SW1 is up */
+    switch_state_changed = 1;
+    led_update();
+    playlist(4);    
+  }
  
 }
