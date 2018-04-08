@@ -27,12 +27,12 @@ void switch_interrupt_handler(){
   char p2val = switch_update_interrupt_sense();
 
   if(!(p2val & SW0))
-    playlist(1);             /* plays c scale */
+    playlist(1);             
   else if(!(p2val & SW1))
-    playlist(2);             /* plays kingdom hearts theme */
+    playlist(2);             
   else if(!(p2val & SW2))
-    playlist(3);             /* plays final fantasy fanfare theme */
+    playlist(3);            
   else if(!(p2val & SW3))
-    playlist(4);             /* plays final fantasy chocobo theme */
+    playlist(4);             
  
 }
